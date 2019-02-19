@@ -1,5 +1,5 @@
 {
-  "name": "websk/php-cache",
+  "name": "websk/php-imagemanager",
   "require": {
     "ext-mbstring": "*",
     "ext-json": "*",
