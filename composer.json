@@ -1,0 +1,16 @@
+{
+  "name": "websk/php-cache",
+  "require": {
+    "ext-mbstring": "*",
+    "ext-json": "*",
+    "websk/php-config": "1.0.*",
+    "websk/php-utils": "1.0.*",
+    "websk/php-simple-router": "1.0.*",
+    "imagine/imagine": "0.6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0c849aeb3d6b855e900afcf19627cb13",
+    "packages": [
+        {
+            "name": "imagine/imagine",
+            "version": "v0.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/avalanche123/Imagine.git",
+                "reference": "149041d2a1b517107bfe270ca2b1a17aa341715d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/149041d2a1b517107bfe270ca2b1a17aa341715d",
+                "reference": "149041d2a1b517107bfe270ca2b1a17aa341715d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "sami/sami": "dev-master"
+            },
+            "suggest": {
+                "ext-gd": "to use the GD implementation",
+                "ext-gmagick": "to use the Gmagick implementation",
+                "ext-imagick": "to use the Imagick implementation"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Imagine": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com",
+                    "homepage": "http://avalanche123.com"
+                }
+            ],
+            "description": "Image processing for PHP 5.3",
+            "homepage": "http://imagine.readthedocs.org/",
+            "keywords": [
+                "drawing",
+                "graphics",
+                "image manipulation",
+                "image processing"
+            ],
+            "time": "2015-09-19T16:54:05+00:00"
+        },
+        {
+            "name": "websk/php-config",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/websk/php-config.git",
+                "reference": "806f75eafc1536c2543f383875503f12c72bcfe3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/websk/php-config/zipball/806f75eafc1536c2543f383875503f12c72bcfe3",
+                "reference": "806f75eafc1536c2543f383875503f12c72bcfe3",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PHP configs wrapper",
+            "homepage": "https://websk.ru/",
+            "time": "2018-12-03T15:24:53+00:00"
+        },
+        {
+            "name": "websk/php-simple-router",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/websk/php-simple-router.git",
+                "reference": "1685670d6e2a303511963a6eab5977e4caf27517"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/websk/php-simple-router/zipball/1685670d6e2a303511963a6eab5977e4caf27517",
+                "reference": "1685670d6e2a303511963a6eab5977e4caf27517",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xmlwriter": "*",
+                "websk/php-config": "1.0.*",
+                "websk/php-utils": "1.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2018-12-03T15:32:05+00:00"
+        },
+        {
+            "name": "websk/php-utils",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/websk/php-utils.git",
+                "reference": "7e5136c23902e1433f04ad5d7bf6059d9206ee57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/websk/php-utils/zipball/7e5136c23902e1433f04ad5d7bf6059d9206ee57",
+                "reference": "7e5136c23902e1433f04ad5d7bf6059d9206ee57",
+                "shasum": ""
+            },
+            "require": {
+                "websk/php-config": "1.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2019-01-13T16:51:35+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
