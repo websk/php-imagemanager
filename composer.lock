@@ -1,22 +1,22 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c849aeb3d6b855e900afcf19627cb13",
+    "content-hash": "977e2b645911af55db554ade5782cd76",
     "packages": [
         {
             "name": "imagine/imagine",
             "version": "v0.6.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/avalanche123/Imagine.git",
+                "url": "https://github.com/php-imagine/Imagine.git",
                 "reference": "149041d2a1b517107bfe270ca2b1a17aa341715d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/149041d2a1b517107bfe270ca2b1a17aa341715d",
+                "url": "https://api.github.com/repos/php-imagine/Imagine/zipball/149041d2a1b517107bfe270ca2b1a17aa341715d",
                 "reference": "149041d2a1b517107bfe270ca2b1a17aa341715d",
                 "shasum": ""
             },
@@ -61,21 +61,28 @@
                 "image manipulation",
                 "image processing"
             ],
+            "support": {
+                "issues": "https://github.com/php-imagine/Imagine/issues",
+                "source": "https://github.com/php-imagine/Imagine/tree/v0.6.3"
+            },
             "time": "2015-09-19T16:54:05+00:00"
         },
         {
             "name": "websk/php-config",
-            "version": "1.0.2",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/websk/php-config.git",
-                "reference": "806f75eafc1536c2543f383875503f12c72bcfe3"
+                "reference": "57f0481617988daffea45ef871f78a09dc58f233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/websk/php-config/zipball/806f75eafc1536c2543f383875503f12c72bcfe3",
-                "reference": "806f75eafc1536c2543f383875503f12c72bcfe3",
+                "url": "https://api.github.com/repos/websk/php-config/zipball/57f0481617988daffea45ef871f78a09dc58f233",
+                "reference": "57f0481617988daffea45ef871f78a09dc58f233",
                 "shasum": ""
+            },
+            "require": {
+                "php": "^8.3"
             },
             "type": "library",
             "autoload": {
@@ -86,26 +93,31 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "PHP configs wrapper",
             "homepage": "https://websk.ru/",
-            "time": "2018-12-03T15:24:53+00:00"
+            "support": {
+                "issues": "https://github.com/websk/php-config/issues",
+                "source": "https://github.com/websk/php-config/tree/2.0.0"
+            },
+            "time": "2024-08-08T07:17:03+00:00"
         },
         {
             "name": "websk/php-simple-router",
-            "version": "1.0.3",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/websk/php-simple-router.git",
-                "reference": "1685670d6e2a303511963a6eab5977e4caf27517"
+                "reference": "db040101697f3e5f14c06cfd7dfdc9d8a70f3d6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/websk/php-simple-router/zipball/1685670d6e2a303511963a6eab5977e4caf27517",
-                "reference": "1685670d6e2a303511963a6eab5977e4caf27517",
+                "url": "https://api.github.com/repos/websk/php-simple-router/zipball/db040101697f3e5f14c06cfd7dfdc9d8a70f3d6f",
+                "reference": "db040101697f3e5f14c06cfd7dfdc9d8a70f3d6f",
                 "shasum": ""
             },
             "require": {
                 "ext-xmlwriter": "*",
-                "websk/php-config": "1.0.*",
-                "websk/php-utils": "1.0.*"
+                "php": "^8.3",
+                "websk/php-config": "2.0.*",
+                "websk/php-utils": "2.0.*"
             },
             "type": "library",
             "autoload": {
@@ -114,24 +126,31 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2018-12-03T15:32:05+00:00"
+            "support": {
+                "issues": "https://github.com/websk/php-simple-router/issues",
+                "source": "https://github.com/websk/php-simple-router/tree/2.0.0"
+            },
+            "time": "2024-08-21T17:42:00+00:00"
         },
         {
             "name": "websk/php-utils",
-            "version": "1.0.3",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/websk/php-utils.git",
-                "reference": "7e5136c23902e1433f04ad5d7bf6059d9206ee57"
+                "reference": "ba0e4ab23f2e91f24769d2c74042e6b993724974"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/websk/php-utils/zipball/7e5136c23902e1433f04ad5d7bf6059d9206ee57",
-                "reference": "7e5136c23902e1433f04ad5d7bf6059d9206ee57",
+                "url": "https://api.github.com/repos/websk/php-utils/zipball/ba0e4ab23f2e91f24769d2c74042e6b993724974",
+                "reference": "ba0e4ab23f2e91f24769d2c74042e6b993724974",
                 "shasum": ""
             },
             "require": {
-                "websk/php-config": "1.0.*"
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^8.3",
+                "websk/php-config": "2.0.*"
             },
             "type": "library",
             "autoload": {
@@ -140,7 +159,12 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2019-01-13T16:51:35+00:00"
+            "description": "PHP utils",
+            "support": {
+                "issues": "https://github.com/websk/php-utils/issues",
+                "source": "https://github.com/websk/php-utils/tree/2.0.0"
+            },
+            "time": "2024-08-08T07:42:18+00:00"
         }
     ],
     "packages-dev": [],
@@ -149,6 +173,12 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": []
+    "platform": {
+        "php": "^8.3",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "ext-gd": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }

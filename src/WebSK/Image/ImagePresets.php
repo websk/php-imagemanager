@@ -29,7 +29,6 @@ class ImagePresets
 
     public static function processImageByPreset(ImageInterface $imageObject, $presetName)
     {
-
         switch ($presetName) {
             case self::IMAGE_PRESET_604_331:
                 $imageSize = $imageObject->getSize();
@@ -51,7 +50,6 @@ class ImagePresets
                 ), $size);
 
                 return $result;
-                break;
             case self::IMAGE_PRESET_510_390:
                 $imageSize = $imageObject->getSize();
                 $thumbnail = $imageObject->copy();
@@ -72,64 +70,47 @@ class ImagePresets
                 ), $size);
 
                 return $result;
-                break;
-
             case self::IMAGE_PRESET_30_30:
                 return $imageObject->thumbnail(new Box(30, 30),
                     ImageInterface::THUMBNAIL_OUTBOUND);
-                break;
             case self::IMAGE_PRESET_800_600:
                 return $imageObject->thumbnail(new Box(800, 600),
                     ImageInterface::THUMBNAIL_OUTBOUND);
-                break;
             case self::IMAGE_PRESET_160_200:
                 return $imageObject->thumbnail(new Box(160, 200),
                     ImageInterface::THUMBNAIL_OUTBOUND);
-                break;
             case '40_40':
                 return $imageObject->thumbnail(new Box(40, 40),
                     ImageInterface::THUMBNAIL_OUTBOUND);
-                break;
             case self::IMAGE_PRESET_800_800_auto:
 
                 return $imageObject->thumbnail(new Box(800, 800),
                     ImageInterface::THUMBNAIL_INSET);
-                break;
             case self::IMAGE_PRESET_UPLOAD:
-                //$box = $imageObject->getSize();
-                //return $imageObject->resize($box->widen(2000));
                 return $imageObject->thumbnail(new Box(2000, 2000));
-                break;
 
             case self::IMAGE_PRESET_600_auto:
                 return $imageObject->thumbnail(new Box(600, 2000),
                     ImageInterface::THUMBNAIL_INSET);
-                break;
 
             case self::IMAGE_PRESET_400_auto:
                 return $imageObject->thumbnail(new Box(400, 2000),
                     ImageInterface::THUMBNAIL_INSET);
-                break;
 
             case self::IMAGE_PRESET_120_auto:
                 return $imageObject->thumbnail(new Box(120, 2000),
                     ImageInterface::THUMBNAIL_INSET);
-                break;
 
             case self::IMAGE_PRESET_160_auto:
                 return $imageObject->thumbnail(new Box(160, 2000),
                     ImageInterface::THUMBNAIL_INSET);
-                break;
 
             case self::IMAGE_PRESET_200_auto:
                 return $imageObject->thumbnail(new Box(200, 2000),
                     ImageInterface::THUMBNAIL_INSET);
-                break;
-
-            default:
-                Exits::exit404();
-                error_log('Preset "' . $presetName . '" is not set');
-                break;
         }
+
+        Exits::exit404();
+        error_log('Preset "' . $presetName . '" is not set');
     }
 }

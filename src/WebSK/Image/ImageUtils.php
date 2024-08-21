@@ -12,16 +12,16 @@ class ImageUtils
 {
 
     /**
-     * @param $destination_file_path
-     * @param $resize_value
-     * @param $prefix
-     * @param $index
-     * @param $quality
+     * @param string $destination_file_path
+     * @param int $resize_value
+     * @param string $prefix
+     * @param int $index
+     * @param int $quality
      * @param bool $to_width
      * @return array
      * @throws \Exception
      */
-    public static function uploadAndResizeImage($destination_file_path, $resize_value, $prefix, $index, $quality, $to_width = true)
+    public static function uploadAndResizeImage(string $destination_file_path, int $resize_value, string $prefix, int $index, int $quality, bool $to_width = true)
     {
         $tmp_dir = ConfWrapper::value('tmp_path');
 
@@ -97,15 +97,14 @@ class ImageUtils
     }
 
     /**
-     * @param $src - имя исходного файла
-     * @param $dest - имя генерируемого файла
-     * @param $resize_value
-     * @param $quality - качество генерируемого изображения
+     * @param string $src - имя исходного файла
+     * @param string $dest - имя генерируемого файла
+     * @param int $resize_value
+     * @param int $quality - качество генерируемого изображения
      * @param bool $to_width -  обрезать по ширине или высоте
-     * @param int $copy
      * @return bool
      */
-    public static function resizeImage($src, $dest, $resize_value, $quality, $to_width = true, $copy = 0)
+    public static function resizeImage(string $src, string $dest, int $resize_value, int $quality, bool $to_width = true)
     {
         if (!file_exists($src)) {
             return false;
@@ -141,17 +140,10 @@ class ImageUtils
 
         $isrc = $icfunc($src);
         $idest = imagecreatetruecolor($width, $height);
-        // $rgb - цвет фона, по умолчанию - белый
+
         imagefill($idest, 0, 0, $rgb);
 
         imagecopyresampled($idest, $isrc, 0, 0, 0, 0, $width, $height, $size[0], $size[1]);
-
-        /*
-        if ($copy==1){
-            $white = ImageColorAllocate($idest, 255, 255, 255);
-            ImageString($idest, 5, 10, $height-22, $site_url, $white);
-        }
-        */
 
         $formatfunc = 'image' . $format;
         $formatfunc($idest, $dest, $quality);

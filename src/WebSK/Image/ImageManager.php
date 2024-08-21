@@ -16,13 +16,13 @@ class ImageManager
      * Imagine library Imagick adapter
      * @var Imagine
      */
-    protected $imagine;
+    protected Imagine $imagine;
 
-    protected $error;
+    protected string $error;
 
-    protected $root_folder;
+    protected string $root_folder;
 
-    public function __construct($root_folder = '')
+    public function __construct(string $root_folder = '')
     {
         $this->imagine = new Imagine();
         if (empty($root_folder)) {
@@ -36,7 +36,7 @@ class ImageManager
      * @param string $file_name
      * @return bool
      */
-    public function removeImageFile(string $file_name)
+    public function removeImageFile(string $file_name): bool
     {
         $img_path = $this->getImagesRootFolder() . DIRECTORY_SEPARATOR . $file_name;
 
@@ -47,7 +47,7 @@ class ImageManager
         return false;
     }
 
-    public function storeUploadedImageFile($file_name, $tmp_file_name, $target_folder_in_images)
+    public function storeUploadedImageFile(string $file_name, string $tmp_file_name, string $target_folder_in_images): string
     {
         if (!\is_uploaded_file($tmp_file_name)) {
             return '';
@@ -56,7 +56,7 @@ class ImageManager
         return $this->storeImageFile($file_name, $tmp_file_name, $target_folder_in_images);
     }
 
-    public function storeImageFile($file_name, $tmp_file_name, $target_folder_in_images)
+    public function storeImageFile(string $file_name, string $tmp_file_name, string $target_folder_in_images): string
     {
         $image_path_in_images_components_arr = [];
         if ($target_folder_in_images != '') {
@@ -106,7 +106,7 @@ class ImageManager
         return $unique_filename;
     }
 
-    public function storeRemoteImageFile($file_url, $target_folder_in_images = '')
+    public function storeRemoteImageFile(string $file_url, string $target_folder_in_images = ''): string
     {
         $new_name = $this->getUniqueImageName('temp.jpg');
 
@@ -122,7 +122,7 @@ class ImageManager
         return $new_name;
     }
 
-    public function output($file_url)
+    public function output(string $file_url)
     {
         list($image_name, $preset_name) = $this->acquirePresetNameAndImageNameFromUrl($file_url);
         $fullpath = $this->getImagePathByPreset($image_name, $preset_name);
@@ -145,7 +145,7 @@ class ImageManager
         exit;
     }
 
-    public function moveImageByPreset($image_path, $preset_path, $preset_name)
+    public function moveImageByPreset(string $image_path, string $preset_path, string $preset_name): bool
     {
         $image = $this->imagine->open($image_path);
 
@@ -186,7 +186,7 @@ class ImageManager
         return true;
     }
 
-    public function getUniqueImageName($user_image_name)
+    public function getUniqueImageName(string $user_image_name): string
     {
         $ext = pathinfo($user_image_name, PATHINFO_EXTENSION);
         $image_name = str_replace(".", "", uniqid(md5($user_image_name), true)) . "." . $ext;
@@ -194,7 +194,7 @@ class ImageManager
         return $image_name;
     }
 
-    public function getImagePathByPreset($image_name, $preset_name)
+    public function getImagePathByPreset(string $image_name, string $preset_name): string
     {
         $images_path_in_filesystem = $this->getImagesRootFolder();
         return
@@ -207,7 +207,7 @@ class ImageManager
             . $image_name;
     }
 
-    public function acquirePresetNameAndImageNameFromUrl($requested_file_path)
+    public function acquirePresetNameAndImageNameFromUrl(string $requested_file_path): array
     {
         $requested_file_path = ltrim($requested_file_path, '/');
 
@@ -224,7 +224,7 @@ class ImageManager
         return $this->root_folder;
     }
 
-    public static function getImgUrlByPreset($image_name, $preset_name)
+    public static function getImgUrlByPreset(string $image_name, string $preset_name): string
     {
         $preset_url = self::getPresetUrlByName($preset_name);
         $image_url = $preset_url . DIRECTORY_SEPARATOR . $image_name;
@@ -232,12 +232,12 @@ class ImageManager
         return $image_url;
     }
 
-    public static function getImgUrlByFileName($image_name)
+    public static function getImgUrlByFileName(string $image_name): string
     {
         return DIRECTORY_SEPARATOR . ImageConstants::IMG_ROOT_FOLDER . DIRECTORY_SEPARATOR . $image_name;
     }
 
-    public static function getPresetUrlByName($preset_name)
+    public static function getPresetUrlByName(string $preset_name): string
     {
         return DIRECTORY_SEPARATOR . ImageConstants::IMG_ROOT_FOLDER . DIRECTORY_SEPARATOR . ImageConstants::IMG_PRESETS_FOLDER . DIRECTORY_SEPARATOR . $preset_name;
     }

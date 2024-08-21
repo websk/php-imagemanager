@@ -11,29 +11,9 @@ use WebSK\Utils\Exits;
  */
 class ImageController
 {
-    /*
-    public static function uploadAction()
-    {
-        Exits::exit404If(!(count($_FILES) > 0));
-
-        $file = $_FILES[0];
-
-        $target_folder_in_images = '';
-
-        if (array_key_exists('target_folder', $_POST)){
-            $target_folder_in_images = $_POST['target_folder'];
-        }
-
-        echo self::processUpload($file, $target_folder_in_images);
-
-        return;
-    }
-    */
 
     public function uploadAction()
     {
-        // TODO: Проверка прав доступа
-
         echo self::processUploadImage();
     }
 
@@ -41,7 +21,7 @@ class ImageController
     {
         $root_images_folder = ImageConstants::IMG_ROOT_FOLDER;
 
-        $json_arr = array();
+        $json_arr = [];
 
         if (array_key_exists('name', $_FILES['upload_image']) && is_array($_FILES['upload_image']['name'])) {
             $files_arr = self::rebuildFilesArray($_FILES['upload_image']);
@@ -79,7 +59,7 @@ class ImageController
      * @param array $files_arr
      * @return array
      */
-    protected static function rebuildFilesArray(array $files_arr)
+    protected static function rebuildFilesArray(array $files_arr): array
     {
         $output_files_arr = array();
         foreach ($files_arr as $key1 => $value1) {
@@ -107,8 +87,6 @@ class ImageController
         );
 
         echo json_encode($response);
-
-        return;
     }
 
     public static function uploadToImagesAction()
@@ -135,8 +113,6 @@ class ImageController
         header('Content-Type: application/json');
 
         echo json_encode($response);
-
-        return;
     }
 
     /**
