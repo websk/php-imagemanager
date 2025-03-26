@@ -6,8 +6,8 @@
     "ext-json": "*",
     "ext-gd": "*",
     "websk/php-config": "2.0.*",
-    "websk/php-utils": "2.0.*",
-    "websk/php-simple-router": "2.0.*",
+    "websk/php-utils": "2.1.*",
+    "websk/php-simple-router": "2.1.*",
     "imagine/imagine": "0.6.3"
   },
   "autoload": {

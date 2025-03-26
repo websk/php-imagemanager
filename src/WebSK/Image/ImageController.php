@@ -12,7 +12,7 @@ use WebSK\Utils\Exits;
 class ImageController
 {
 
-    public function uploadAction()
+    public function uploadAction(): void
     {
         echo self::processUploadImage();
     }
@@ -71,7 +71,7 @@ class ImageController
         return $output_files_arr;
     }
 
-    public static function uploadToFilesAction()
+    public static function uploadToFilesAction(): void
     {
         Exits::exit404If(!(count($_FILES) > 0));
 
@@ -89,7 +89,7 @@ class ImageController
         echo json_encode($response);
     }
 
-    public static function uploadToImagesAction()
+    public static function uploadToImagesAction(): void
     {
         Exits::exit404If(!(count($_FILES) > 0));
 

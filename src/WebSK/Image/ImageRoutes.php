@@ -10,7 +10,7 @@ use WebSK\SimpleRouter\SimpleRouter;
  */
 class ImageRoutes
 {
-    public static function routes()
+    public static function routes(): void
     {
         SimpleRouter::staticRoute('@^/files/images/cache/(.+)/(.+)$@', ControllerIndex::class, 'indexAction');
         SimpleRouter::staticRoute('@^/images/upload$@', ImageController::class, 'uploadAction');

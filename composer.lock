@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "977e2b645911af55db554ade5782cd76",
+    "content-hash": "930228488475b72c21aa164b86093d31",
     "packages": [
         {
             "name": "imagine/imagine",
@@ -101,23 +101,23 @@
         },
         {
             "name": "websk/php-simple-router",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/websk/php-simple-router.git",
-                "reference": "db040101697f3e5f14c06cfd7dfdc9d8a70f3d6f"
+                "reference": "528c539f246bd115fe51fef548b3decd788acfb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/websk/php-simple-router/zipball/db040101697f3e5f14c06cfd7dfdc9d8a70f3d6f",
-                "reference": "db040101697f3e5f14c06cfd7dfdc9d8a70f3d6f",
+                "url": "https://api.github.com/repos/websk/php-simple-router/zipball/528c539f246bd115fe51fef548b3decd788acfb3",
+                "reference": "528c539f246bd115fe51fef548b3decd788acfb3",
                 "shasum": ""
             },
             "require": {
                 "ext-xmlwriter": "*",
                 "php": "^8.3",
                 "websk/php-config": "2.0.*",
-                "websk/php-utils": "2.0.*"
+                "websk/php-utils": "2.1.*"
             },
             "type": "library",
             "autoload": {
@@ -128,29 +128,28 @@
             "notification-url": "https://packagist.org/downloads/",
             "support": {
                 "issues": "https://github.com/websk/php-simple-router/issues",
-                "source": "https://github.com/websk/php-simple-router/tree/2.0.0"
+                "source": "https://github.com/websk/php-simple-router/tree/2.1.0"
             },
-            "time": "2024-08-21T17:42:00+00:00"
+            "time": "2025-03-26T06:10:34+00:00"
         },
         {
             "name": "websk/php-utils",
-            "version": "2.0.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/websk/php-utils.git",
-                "reference": "ba0e4ab23f2e91f24769d2c74042e6b993724974"
+                "reference": "1fe69ffbf539aa62aa536b1ac11b09759f41e71e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/websk/php-utils/zipball/ba0e4ab23f2e91f24769d2c74042e6b993724974",
-                "reference": "ba0e4ab23f2e91f24769d2c74042e6b993724974",
+                "url": "https://api.github.com/repos/websk/php-utils/zipball/1fe69ffbf539aa62aa536b1ac11b09759f41e71e",
+                "reference": "1fe69ffbf539aa62aa536b1ac11b09759f41e71e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": "^8.3",
-                "websk/php-config": "2.0.*"
+                "php": "^8.3"
             },
             "type": "library",
             "autoload": {
@@ -162,15 +161,15 @@
             "description": "PHP utils",
             "support": {
                 "issues": "https://github.com/websk/php-utils/issues",
-                "source": "https://github.com/websk/php-utils/tree/2.0.0"
+                "source": "https://github.com/websk/php-utils/tree/2.1.1"
             },
-            "time": "2024-08-08T07:42:18+00:00"
+            "time": "2025-03-25T05:39:40+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
@@ -179,6 +178,6 @@
         "ext-json": "*",
         "ext-gd": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
