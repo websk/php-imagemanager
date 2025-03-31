@@ -2,8 +2,8 @@
 
 namespace WebSK\Image;
 
-use Imagine\Gd\Imagine;
 use WebSK\Utils\Exits;
+use Imagine\Gd\Imagine;
 
 /**
  * Class ImageManager

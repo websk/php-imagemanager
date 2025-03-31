@@ -21,8 +21,14 @@ class ImageUtils
      * @return array
      * @throws \Exception
      */
-    public static function uploadAndResizeImage(string $destination_file_path, int $resize_value, string $prefix, int $index, int $quality, bool $to_width = true)
-    {
+    public static function uploadAndResizeImage(
+        string $destination_file_path,
+        int $resize_value,
+        string $prefix,
+        int $index,
+        int $quality,
+        bool $to_width = true
+    ): array {
         $tmp_dir = ConfWrapper::value('tmp_path');
 
         if (!is_dir($tmp_dir)) {
@@ -101,10 +107,10 @@ class ImageUtils
      * @param string $dest - имя генерируемого файла
      * @param int $resize_value
      * @param int $quality - качество генерируемого изображения
-     * @param bool $to_width -  обрезать по ширине или высоте
+     * @param bool $to_width - обрезать по ширине или высоте
      * @return bool
      */
-    public static function resizeImage(string $src, string $dest, int $resize_value, int $quality, bool $to_width = true)
+    public static function resizeImage(string $src, string $dest, int $resize_value, int $quality, bool $to_width = true): bool
     {
         if (!file_exists($src)) {
             return false;
@@ -119,7 +125,7 @@ class ImageUtils
         $icfunc = "imagecreatefrom" . $format;
 
         if ($format == 'png') {
-            $quality = ceil($quality/10);
+            $quality = ceil($quality / 10);
         }
 
         if (!function_exists($icfunc)) {

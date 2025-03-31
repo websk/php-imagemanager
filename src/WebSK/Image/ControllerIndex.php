@@ -10,15 +10,15 @@ class ControllerIndex
 {
 
     /**
-     * @param string $presetName
-     * @param string $imageName
+     * @param string $preset_name
+     * @param string $image_name
      */
-    public function indexAction(string $presetName, string $imageName)
+    public function indexAction(string $preset_name, string $image_name): void
     {
         $image = new ImageManager();
 
-        $baseUrl = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        $base_url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-        $image->output($baseUrl);
+        $image->output($base_url);
     }
 }

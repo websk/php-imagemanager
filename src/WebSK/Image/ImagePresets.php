@@ -13,17 +13,17 @@ use WebSK\Utils\Exits;
  */
 class ImagePresets
 {
-    const IMAGE_PRESET_604_331 = '604_331';
-    const IMAGE_PRESET_510_390 = '510_390';
-    const IMAGE_PRESET_800_600 = '800_600';
-    const IMAGE_PRESET_160_200 = '160_200';
-    const IMAGE_PRESET_800_800_auto = '800_800_auto';
-    const IMAGE_PRESET_600_auto = '600_auto';
-    const IMAGE_PRESET_400_auto = '400_auto';
-    const IMAGE_PRESET_120_auto = '120_auto';
-    const IMAGE_PRESET_160_auto = '160_auto';
-    const IMAGE_PRESET_200_auto = '200_auto';
-    const IMAGE_PRESET_30_30 = '30_30';
+    const string IMAGE_PRESET_604_331 = '604_331';
+    const string IMAGE_PRESET_510_390 = '510_390';
+    const string IMAGE_PRESET_800_600 = '800_600';
+    const string IMAGE_PRESET_160_200 = '160_200';
+    const string IMAGE_PRESET_800_800_auto = '800_800_auto';
+    const string IMAGE_PRESET_600_auto = '600_auto';
+    const string IMAGE_PRESET_400_auto = '400_auto';
+    const string IMAGE_PRESET_120_auto = '120_auto';
+    const string IMAGE_PRESET_160_auto = '160_auto';
+    const string IMAGE_PRESET_200_auto = '200_auto';
+    const string IMAGE_PRESET_30_30 = '30_30';
 
     const IMAGE_PRESET_UPLOAD = 'upload';
 

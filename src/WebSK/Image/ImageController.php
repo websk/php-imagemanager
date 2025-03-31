@@ -17,11 +17,13 @@ class ImageController
         echo self::processUploadImage();
     }
 
-    public static function processUploadImage()
+    public static function processUploadImage(): string
     {
         $root_images_folder = ImageConstants::IMG_ROOT_FOLDER;
 
-        $json_arr = [];
+        $json_arr = [
+            'status' => 'success'
+        ];
 
         if (array_key_exists('name', $_FILES['upload_image']) && is_array($_FILES['upload_image']['name'])) {
             $files_arr = self::rebuildFilesArray($_FILES['upload_image']);
@@ -49,8 +51,6 @@ class ImageController
             'deleteUrl' => "",
             'deleteType' => "DELETE"
         );
-
-        $json_arr['status'] = 'success';
 
         return json_encode($json_arr);
     }
